@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f5f1ea] text-black">
 
-      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-gradient-to-b from-black/60 to-black/10 border-b border-white/10">
+      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-gradient-to-b from-black/60 via-black/30 to-transparent border-b border-white/10">
         <div className="flex justify-between items-center px-10 py-5">
           <h1 className="text-2xl font-bold tracking-tight text-white">
             Paren(theses)
@@ -40,28 +40,29 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="relative h-[88vh] overflow-hidden rounded-b-[3rem]">
+      <section className="relative h-screen overflow-hidden rounded-b-[3rem]">
         <img
           src={featuredArticle.image}
           alt={featuredArticle.title}
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 flex flex-col justify-end h-full px-10 pb-16">
-          <div className="flex justify-between items-end gap-10 mb-6">
+        <div className="relative z-10 flex flex-col justify-end h-full px-10 pb-10 pt-32">
+          <div className="flex justify-between items-end gap-10 mb-4">
+
             <div className="max-w-4xl">
-              <p className="uppercase tracking-[0.3em] text-sm mb-6 text-white/70">
+              <p className="uppercase tracking-[0.3em] text-sm mb-5 text-white/70">
                 {featuredArticle.category}
               </p>
 
-              <h2 className="text-[6rem] font-black leading-[0.9] tracking-tight text-white mb-6">
+              <h2 className="text-[5.4rem] font-black leading-[0.9] tracking-tight text-white mb-5">
                 {featuredArticle.title}
               </h2>
             </div>
 
-            <div className="text-right text-white/80 mb-3 min-w-[280px]">
+            <div className="text-right text-white/80 mb-4 min-w-[280px]">
               <p className="text-lg font-semibold">
                 Escrito por {featuredArticle.author}
               </p>
@@ -70,9 +71,10 @@ export default function Home() {
                 {featuredArticle.role}
               </p>
             </div>
+
           </div>
 
-          <p className="text-2xl text-white/90 max-w-3xl leading-relaxed">
+          <p className="text-[1.6rem] text-white/90 max-w-3xl leading-relaxed">
             {featuredArticle.subtitle}
           </p>
         </div>
@@ -102,11 +104,11 @@ export default function Home() {
                     {article.category}
                   </p>
 
-                  <h3 className="text-[2.7rem] font-black leading-[1] tracking-tight mb-5">
+                  <h3 className="text-[2.5rem] font-black leading-[1] tracking-tight mb-5">
                     {article.title}
                   </h3>
 
-                  <p className="text-[1.05rem] text-neutral-700 leading-[1.8] max-w-xl">
+                  <p className="text-[1rem] text-neutral-700 leading-[1.8] max-w-xl">
                     {article.subtitle}
                   </p>
                 </div>
