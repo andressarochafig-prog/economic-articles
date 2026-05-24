@@ -27,8 +27,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#f5f1ea] text-black">
-
-      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-gradient-to-b from-black/60 via-black/30 to-transparent border-b border-white/10">
+      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-gradient-to-b from-black/75 via-black/40 to-transparent border-b border-white/10">
         <div className="flex justify-between items-center px-10 py-5">
           <h1 className="text-2xl font-bold tracking-tight text-white">
             Paren(theses)
@@ -49,20 +48,19 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 flex flex-col justify-end h-full px-10 pb-10 pt-32">
-          <div className="flex justify-between items-end gap-10 mb-4">
-
+        <div className="relative z-10 flex flex-col justify-end h-full px-10 pb-12 pt-44">
+          <div className="flex justify-between items-end gap-10 mb-5">
             <div className="max-w-4xl">
-              <p className="uppercase tracking-[0.3em] text-sm mb-5 text-white/70">
+              <p className="uppercase tracking-[0.3em] text-xs md:text-sm mb-4 text-white/70">
                 {featuredArticle.category}
               </p>
 
-              <h2 className="text-[5.4rem] font-black leading-[0.9] tracking-tight text-white mb-5">
+              <h2 className="text-[3.8rem] md:text-[4.8rem] lg:text-[5rem] font-black leading-[0.92] tracking-tight text-white mb-5">
                 {featuredArticle.title}
               </h2>
             </div>
 
-            <div className="text-right text-white/80 mb-4 min-w-[280px]">
+            <div className="hidden lg:block text-right text-white/80 mb-4 min-w-[280px]">
               <p className="text-lg font-semibold">
                 Escrito por {featuredArticle.author}
               </p>
@@ -71,10 +69,9 @@ export default function Home() {
                 {featuredArticle.role}
               </p>
             </div>
-
           </div>
 
-          <p className="text-[1.6rem] text-white/90 max-w-3xl leading-relaxed">
+          <p className="text-[1.35rem] md:text-[1.5rem] text-white/90 max-w-3xl leading-relaxed">
             {featuredArticle.subtitle}
           </p>
         </div>
@@ -82,7 +79,6 @@ export default function Home() {
 
       <section className="px-10 py-24">
         <div className="flex flex-col gap-10 max-w-6xl mx-auto">
-
           {articles.map((article, index) => (
             <a
               href={`/ensaios/${index}`}
@@ -90,7 +86,6 @@ export default function Home() {
               className="group border border-black/10 rounded-[2rem] overflow-hidden bg-[#f8f5ef] hover:bg-[#f3efe8] transition duration-500"
             >
               <div className="grid md:grid-cols-[1.1fr_0.9fr] items-stretch">
-
                 <div className="overflow-hidden">
                   <img
                     src={article.image}
@@ -104,7 +99,7 @@ export default function Home() {
                     {article.category}
                   </p>
 
-                  <h3 className="text-[2.5rem] font-black leading-[1] tracking-tight mb-5">
+                  <h3 className="text-[2.2rem] md:text-[2.5rem] font-black leading-[1] tracking-tight mb-5">
                     {article.title}
                   </h3>
 
@@ -112,14 +107,11 @@ export default function Home() {
                     {article.subtitle}
                   </p>
                 </div>
-
               </div>
             </a>
           ))}
-
         </div>
       </section>
-
     </main>
   );
 }
