@@ -2,7 +2,7 @@
 
 # Paren(theses)
 
-🔗 **[Ver site ao vivo](https://economic-articles-z49q.vercel.app/)**
+🔗 **[Ver site](https://economic-articles-z49q.vercel.app/)**
 
 </div>
 
