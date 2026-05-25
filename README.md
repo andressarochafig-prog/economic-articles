@@ -59,7 +59,7 @@ Publicado via **[Vercel](https://economic-articles-z49q.vercel.app/)** com deplo
 **Andressa Rocha**
 Estudante de Ciências Econômicas — UFRRJ
 
-[![LinkedIn] (https://www.linkedin.com/in/andressa-rocha-figueiredo-064195342)
+[LinkedIn] ([https://www.linkedin.com/in/andressa-rocha-figueiredo-064195342](https://www.linkedin.com/in/andressarochafigueiredoufrrj/))
 
 ---
 
