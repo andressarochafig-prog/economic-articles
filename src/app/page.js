@@ -27,7 +27,7 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 flex flex-col justify-end h-full px-10 pb-10 pt-28">
+        <div className="relative z-10 flex flex-col justify-center h-full px-10 py-10">
           <div className="flex justify-between items-end gap-10 mb-4">
             <div className="max-w-4xl">
               <p className="uppercase tracking-[0.3em] text-xs md:text-sm mb-3 text-white/70">
