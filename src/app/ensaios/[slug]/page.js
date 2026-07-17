@@ -1,25 +1,64 @@
-const articles = [
-  {
-    slug: "0",
-    category: "Sociedade & Economia",
-    title: "Por que alimentos saudáveis ficaram tão caros?",
-    subtitle:
-      "Uma análise sobre inflação, cultura wellness, logística e comportamento de consumo.",
-    image: "https://images.unsplash.com/photo-1542838132-92c53300491e",
-    content: "Ensaio ainda em produção... aguarde.",
-  },
+import { articles } from "@/data/articles";
+import Footer from "@/components/Footer";
 
-  {
-    slug: "1",
-    category: "Sociedade & Economia",
-    title: "O preço do movimento",
-    subtitle:
-      "Como a desigualdade de renda e a falta de infraestrutura urbana moldam o acesso à atividade física.",
-    image:
-      "https://i.pinimg.com/736x/65/ff/a5/65ffa503ef3fc661e86a0a76cefeaa21.jpg",
-    content: "Ensaio ainda em produção... aguarde.",
-  },
-];
+function ArticleBlock({ block, index }) {
+  if (block.type === "heading") {
+    return (
+      <h2
+        key={index}
+        className="text-[1.6rem] md:text-[1.8rem] font-black tracking-tight mt-14 mb-5 text-black"
+      >
+        {block.text}
+      </h2>
+    );
+  }
+
+  if (block.type === "quote") {
+    return (
+      <blockquote
+        key={index}
+        className="border-l-4 border-black/20 pl-6 my-10 italic text-[1.25rem] leading-[1.9] text-neutral-800"
+      >
+        <p>“{block.text}”</p>
+        {block.cite && (
+          <cite className="block not-italic text-sm text-neutral-500 mt-3">
+            — {block.cite}
+          </cite>
+        )}
+      </blockquote>
+    );
+  }
+
+  if (block.type === "figure") {
+    return (
+      <figure key={index} className="my-12">
+        {block.src ? (
+          <div className="w-full rounded-xl border border-black/10 bg-white p-4 md:p-6">
+            <img
+              src={block.src}
+              alt={`Figura ${block.number}`}
+              className="w-full h-auto"
+            />
+          </div>
+        ) : (
+          <div className="w-full aspect-video rounded-xl border border-dashed border-black/20 bg-black/5 flex items-center justify-center text-neutral-400 text-sm">
+            Imagem da Figura {block.number} pendente de envio
+          </div>
+        )}
+        <figcaption className="text-xs text-neutral-500 leading-relaxed mt-3">
+          <strong>Figura {block.number}:</strong> {block.caption}
+        </figcaption>
+      </figure>
+    );
+  }
+
+  // paragraph (default)
+  return (
+    <p key={index} className="text-[1.1rem] leading-[1.95] text-neutral-700 mb-7">
+      {block.text}
+    </p>
+  );
+}
 
 export default async function EssayPage({ params }) {
   const { slug } = await params;
@@ -44,7 +83,8 @@ export default async function EssayPage({ params }) {
         </div>
       </nav>
 
-      <section className="relative h-screen overflow-hidden rounded-b-[3rem]">
+      {/* Capa: reduzida para ~metade da altura de tela (antes h-screen) */}
+      <section className="relative h-[52vh] md:h-[58vh] min-h-[340px] overflow-hidden rounded-b-[3rem]">
         <img
           src={article.image}
           alt={article.title}
@@ -53,26 +93,29 @@ export default async function EssayPage({ params }) {
 
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 flex flex-col justify-end h-full px-10 pb-12 pt-44">
-          <p className="uppercase tracking-[0.3em] text-xs md:text-sm mb-4 text-white/70">
+        <div className="relative z-10 flex flex-col justify-end h-full px-10 pb-10 pt-28">
+          <p className="uppercase tracking-[0.3em] text-xs md:text-sm mb-3 text-white/70">
             {article.category}
           </p>
 
-          <h1 className="text-[3.8rem] md:text-[4.8rem] lg:text-[5rem] font-black leading-[0.92] tracking-tight text-white max-w-5xl mb-5">
+          <h1 className="text-[2.1rem] md:text-[2.9rem] lg:text-[3.3rem] font-black leading-[0.95] tracking-tight text-white max-w-4xl mb-3">
             {article.title}
           </h1>
 
-          <p className="text-[1.35rem] md:text-[1.5rem] text-white/90 max-w-3xl leading-relaxed">
+          <p className="text-base md:text-lg text-white/90 max-w-2xl leading-relaxed">
             {article.subtitle}
           </p>
         </div>
       </section>
 
-      <article className="max-w-4xl mx-auto px-10 py-24">
-        <p className="text-[1.45rem] leading-[2] text-neutral-700">
-          {article.content}
-        </p>
+      {/* Coluna de leitura estreita e centralizada, como uma matéria de jornal */}
+      <article className="max-w-[680px] mx-auto px-6 py-20">
+        {article.content.map((block, index) => (
+          <ArticleBlock block={block} index={index} key={index} />
+        ))}
       </article>
+
+      <Footer />
     </main>
   );
 }

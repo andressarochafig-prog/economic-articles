@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+
 export default function Sobre() {
   return (
     <main className="min-h-screen bg-[#f5f1ea] text-black">
@@ -5,7 +7,7 @@ export default function Sobre() {
       <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-gradient-to-b from-black/60 to-black/10 border-b border-white/10">
         <div className="flex justify-start items-center px-10 py-5">
 
-          <a
+          
             href="/"
             className="text-2xl font-bold tracking-tight text-white"
           >
@@ -15,17 +17,19 @@ export default function Sobre() {
         </div>
       </nav>
 
-      <section className="px-10 pt-40 pb-24 max-w-5xl">
+      <section className="px-10 pt-40 pb-24">
+
+        <div className="max-w-[680px] mx-auto">
 
         <p className="uppercase tracking-[0.3em] text-sm text-neutral-500 mb-6">
           Sobre
         </p>
 
-        <h1 className="text-[4rem] font-black leading-[0.95] tracking-tight mb-10">
+        <h1 className="text-[2.6rem] md:text-[3.2rem] font-black leading-[0.95] tracking-tight mb-10">
           Olá...
         </h1>
 
-        <div className="max-w-3xl text-[1.35rem] leading-[1.9] text-neutral-700 space-y-8">
+        <div className="text-[1.1rem] leading-[1.95] text-neutral-700 space-y-7">
 
           <p>
             Meu nome é Andressa Rocha, sou estudante de Ciências Econômicas e
@@ -57,7 +61,11 @@ export default function Sobre() {
 
         </div>
 
+        </div>
+
       </section>
+
+      <Footer />
 
     </main>
   );

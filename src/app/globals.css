@@ -19,6 +19,13 @@
   }
 }
 
+html {
+  /* Reduz a escala geral do site (~80%). Como o Tailwind usa rem
+     para fontes e espaçamentos, isso encolhe tudo proporcionalmente
+     sem precisar alterar classe por classe. */
+  font-size: 80%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
