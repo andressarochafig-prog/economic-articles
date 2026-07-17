@@ -19,7 +19,7 @@ function ArticleBlock({ block, index }) {
         key={index}
         className="border-l-4 border-black/20 pl-6 my-10 italic text-[1.25rem] leading-[1.9] text-neutral-800"
       >
-        <p>“{block.text}”</p>
+        <p>"{block.text}"</p>
         {block.cite && (
           <cite className="block not-italic text-sm text-neutral-500 mt-3">
             — {block.cite}
@@ -83,7 +83,7 @@ export default async function EssayPage({ params }) {
         </div>
       </nav>
 
-      {/* Capa: reduzida para ~metade da altura de tela (antes h-screen) */}
+      {/* Capa: texto centralizado verticalmente */}
       <section className="relative h-[52vh] md:h-[58vh] min-h-[340px] overflow-hidden rounded-b-[3rem]">
         <img
           src={article.image}
@@ -93,7 +93,7 @@ export default async function EssayPage({ params }) {
 
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 flex flex-col justify-end h-full px-10 pb-10 pt-28">
+        <div className="relative z-10 flex flex-col justify-center h-full px-10 py-10">
           <p className="uppercase tracking-[0.3em] text-xs md:text-sm mb-3 text-white/70">
             {article.category}
           </p>
@@ -108,8 +108,25 @@ export default async function EssayPage({ params }) {
         </div>
       </section>
 
+      {/* Autora + data */}
+      <div className="max-w-[680px] mx-auto px-6 pt-10 flex items-center gap-4">
+        <img
+          src="/foto-andressa.jpg"
+          alt="Andressa Rocha"
+          className="w-14 h-14 rounded-full object-cover"
+        />
+        <div>
+          <p className="text-sm font-semibold text-neutral-800">
+            Escrito por Andressa Rocha — graduanda de Ciências Econômicas
+          </p>
+          <p className="text-xs text-neutral-500 mt-1">
+            {article.date || "17/07/2026"}
+          </p>
+        </div>
+      </div>
+
       {/* Coluna de leitura estreita e centralizada, como uma matéria de jornal */}
-      <article className="max-w-[680px] mx-auto px-6 py-20">
+      <article className="max-w-[680px] mx-auto px-6 py-16">
         {article.content.map((block, index) => (
           <ArticleBlock block={block} index={index} key={index} />
         ))}
