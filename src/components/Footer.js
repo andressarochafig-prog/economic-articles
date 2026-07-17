@@ -16,7 +16,7 @@ export default function Footer() {
         </h2>
 
         <div className="flex items-center justify-between">
-          
+          <a
             href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export default function Footer() {
             </span>
           </a>
 
-          
+          <a
             href={SUBSTACK_URL}
             target="_blank"
             rel="noopener noreferrer"

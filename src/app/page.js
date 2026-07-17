@@ -18,7 +18,6 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Capa: reduzida para ~metade da altura de tela (antes h-screen) */}
       <section className="relative h-[52vh] md:h-[58vh] min-h-[340px] overflow-hidden rounded-b-[3rem]">
         <img
           src={featuredArticle.image}
@@ -60,7 +59,7 @@ export default function Home() {
       <section className="px-10 py-24">
         <div className="flex flex-col gap-10 max-w-6xl mx-auto">
           {articles.map((article) => (
-            
+            <a
               href={`/ensaios/${article.slug}`}
               key={article.slug}
               className="group border border-black/10 rounded-[2rem] overflow-hidden bg-[#f8f5ef] hover:bg-[#f3efe8] transition duration-500"

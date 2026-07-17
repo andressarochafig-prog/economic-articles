@@ -7,7 +7,7 @@ export default function Sobre() {
       <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-gradient-to-b from-black/60 to-black/10 border-b border-white/10">
         <div className="flex justify-start items-center px-10 py-5">
 
-          
+          <a
             href="/"
             className="text-2xl font-bold tracking-tight text-white"
           >
