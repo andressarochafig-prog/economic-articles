@@ -111,13 +111,13 @@ export default async function EssayPage({ params }) {
       {/* Autora + data */}
       <div className="max-w-[680px] mx-auto px-6 pt-10 flex items-center gap-4">
         <img
-          src="/foto-andressa.jpg"
+         src="/figures/foto-andressa.jpg"
           alt="Andressa Rocha"
           className="w-14 h-14 rounded-full object-cover"
         />
         <div>
           <p className="text-sm font-semibold text-neutral-800">
-            Escrito por Andressa Rocha — graduanda de Ciências Econômicas
+            Escrito por Andressa Rocha — Graduanda de Ciências Econômicas
           </p>
           <p className="text-xs text-neutral-500 mt-1">
             {article.date || "17/07/2026"}
