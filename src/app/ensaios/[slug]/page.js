@@ -13,7 +13,7 @@ function ArticleBlock({ block, index }) {
     );
   }
 
-  if (block.type === "quote") {
+ if (block.type === "quote") {
     return (
       <blockquote
         key={index}
@@ -21,7 +21,7 @@ function ArticleBlock({ block, index }) {
       >
         <p>"{block.text}"</p>
         {block.cite && (
-          <cite className="block not-italic text-sm text-neutral-500 mt-3">
+          <cite className="block not-italic text-[1.25rem] text-neutral-500 mt-3">
             — {block.cite}
           </cite>
         )}
@@ -98,7 +98,7 @@ export default async function EssayPage({ params }) {
             {article.category}
           </p>
 
-          <h1 className="text-[2.1rem] md:text-[2.9rem] lg:text-[3.3rem] font-black leading-[0.95] tracking-tight text-white max-w-4xl mb-3">
+          <h1 className="text-[2.3rem] md:text-[3.1rem] lg:text-[3.5rem] font-black leading-[0.95] tracking-tight text-white max-w-4xl mb-3">
             {article.title}
           </h1>
 
@@ -109,7 +109,7 @@ export default async function EssayPage({ params }) {
       </section>
 
       {/* Autora + data */}
-      <div className="max-w-[680px] mx-auto px-6 pt-10 flex items-center gap-4">
+      <div className="max-w-[680px] mx-auto px-6 pt-4 flex items-center gap-4">
         <img
          src="/figures/foto-andressa.jpg"
           alt="Andressa Rocha"
