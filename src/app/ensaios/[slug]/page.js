@@ -117,7 +117,7 @@ export default async function EssayPage({ params }) {
         />
         <div>
           <p className="text-sm font-semibold text-neutral-800">
-            Escrito por Andressa Rocha — Graduanda de Ciências Econômicas
+            Escrito por Andressa Rocha — Estudante de Ciências Econômicas
           </p>
           <p className="text-xs text-neutral-500 mt-1">
             {article.date || "17/07/2026"}
