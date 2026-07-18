@@ -16,7 +16,7 @@ export const articles = [
       },
       {
         type: "paragraph",
-        text: "A frase dita pela célebre personagem nordestina de Clarice Lispector resume uma realidade que vem crescendo exponencialmente. Em um mundo marcado por uma das maiores contradições do desenvolvimento econômico moderno – no qual a produtividade agrícola e os avanços biotecnológicos atingem recordes históricos –, a escolha alimentar de um indivíduo vem deixando ser direcionada por seus desejos (seja por ter uma vida mais saudável ou porque sente vontade de consumir tal alimento) e passa a ser ditada por seu poder aquisitivo. Essa escolha, é, portanto, limitada pela renda disponível. Comer, no Brasil contemporâneo, tornou-se um ato de restrição orçamentária.",
+        text: "A frase dita pela célebre personagem nordestina de Clarice Lispector resume uma realidade que vem crescendo exponencialmente. Em um mundo marcado por uma das maiores contradições do desenvolvimento econômico moderno – no qual a produtividade agrícola e os avanços biotecnológicos atingem recordes históricos –, a escolha alimentar de um indivíduo vem deixando ser direcionada por seus desejos (seja por ter uma vida mais saudável ou porque sente vontade de consumir tal alimento) e passa a ser ditada por seu poder aquisitivo. Essa escolha é, portanto, limitada pela renda disponível. Comer, no Brasil contemporâneo, tornou-se um ato de restrição orçamentária.",
       },
       {
         type: "heading",
