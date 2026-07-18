@@ -21,7 +21,7 @@ function ArticleBlock({ block, index }) {
       >
         <p>"{block.text}"</p>
         {block.cite && (
-          <cite className="block not-italic text-[1.25rem] text-neutral-500 mt-3">
+          <cite className="block not-italic text-[1.1rem] text-neutral-500 mt-3">
             — {block.cite}
           </cite>
         )}
@@ -126,7 +126,7 @@ export default async function EssayPage({ params }) {
       </div>
 
       {/* Coluna de leitura estreita e centralizada, como uma matéria de jornal */}
-      <article className="max-w-[680px] mx-auto px-6 py-16">
+      <article className="max-w-[680px] mx-auto px-6 pt-4 pb-16">
         {article.content.map((block, index) => (
           <ArticleBlock block={block} index={index} key={index} />
         ))}
